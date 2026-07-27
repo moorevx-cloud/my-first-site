@@ -7,7 +7,10 @@ body{
     alignn-items: center;
 
     height:100vh;
-    background:linear-gradient(135deg,#B8A7F0,#232329);
+    
+    background:linear-gradient(-45deg,#B8A7F0,#232329,#9333ea,#2563eb,#0f172a);
+    background-size:400% 400%;
+    animation:gradient 12s ease infinite;
 }
 
 .card{
@@ -26,6 +29,8 @@ body{
     border-radius: 25px;
 
     box-shadow: 0 15px 32px rgba(0,0,0,.25);
+
+    transition:0.3s ease;
 }
 
 .card img{
@@ -38,11 +43,12 @@ body{
 }
 
 .card h1{
-    margin:20px 0 10px;
+    font-size:40px;
+    color:white;
+    margin-top:20px;
 }
-
 .card p{
-    color:#666;
+    color:#d1d5db;
 }
 
 button{
@@ -62,4 +68,19 @@ button:hover{
     background:#2563eb;
     box-shadow:0 0 20px #3b82f6;
     
+}
+
+@keyframes gradient {
+    0% {
+        background-position:0% 50%;
+    }
+    50% {
+        background-position:100% 50% ;
+    }
+    100% {
+        background-position:0% 50%;
+    }
+}
+.card:hover{
+    transform:translateY(-8px);
 }
