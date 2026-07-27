@@ -5,12 +5,12 @@ body{
     display:flex;
     justify-content: center;
     alignn-items: center;
-
-    height:100vh;
+    min-height:100vh;
     
     background:linear-gradient(-45deg,#B8A7F0,#232329,#9333ea,#2563eb,#0f172a);
     background-size:400% 400%;
     animation:gradient 12s ease infinite;
+    font-family:'poppins',sans-serif;
 }
 
 .card{
