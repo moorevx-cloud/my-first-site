@@ -74,6 +74,19 @@ button:hover{
     background:#2563eb;
     box-shadow:0 0 25px rgba(59,130,246,.8);
 }
+.card{
+    animation:showCard 0.8s ease;
+}
+@keyframes showCard{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
 @keyframes gradient {
     0% {
@@ -107,5 +120,29 @@ button:hover{
     button{
         width:180px;
         font-size:18px;
+    }
+}
+/* Анимация только для комьютеров */
+@media (hover:hover) and (pointer:fine) {
+    .card{
+        transition:0,4s ease;
+    }
+    .card:hover{
+        transform:translateY(-10px)
+    scale(1.03);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
+.card img{
+    transition:0.4 ease;
+}
+    .card:hover img{
+        transform: scale(1.08);
+    }
+    button{
+        transition:0.3s ease;
+    }
+    button:hover{
+        transform: scale(1.08);
+        box-shadow: 0 0 25px rgba(59,130,246,.7);
     }
 }
