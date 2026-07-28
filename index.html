@@ -10,6 +10,24 @@
 href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+    const card=document.querySelector(".card");
+    if(window.matchMedia("(hover:hover)").matches) {
+      card.addEventListener("mousemove",(e)=> {
+        const rect=card.getBoundingClientRect();
+        const x= e.clientX - rect.left;
+        const y= e.clientY - rect.top;
+
+        const rotateY = (x/rect.width-0.5)*24;
+        const rotateX = (0.5-y/rect.height)*24;
+
+        card.style.transform='perspective(1000px) rotateX(0deg) rotateY(0deg)";
+      });
+      card.addEventListener(mouseleave",()=>{
+        card.style.transform="perspective(1000px) rotateX(0deg) rotateY(0deg)";
+      });
+    }
+  </script>
 <body>
 
 <div class="card">
